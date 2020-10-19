@@ -119,6 +119,8 @@ dependencies {
     implementation 'com.google.android.material:material:1.1.0'
 
 
+    //chart
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
 
     kapt "androidx.room:room-compiler:2.3.0-alpha02"
 
