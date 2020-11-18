@@ -3,9 +3,10 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: "androidx.navigation.safeargs.kotlin"
 apply plugin: 'kotlin-kapt'
+apply plugin: 'com.google.gms.google-services'
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 30
     buildToolsVersion "29.0.3"
 
     buildFeatures {
@@ -13,9 +14,9 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.invest.advisor"
+        applicationId "com.goranatos.investadviser"
         minSdkVersion 21
-        targetSdkVersion 29
+        targetSdkVersion 30
         versionCode 1
         versionName "1.0"
 
@@ -43,6 +44,11 @@ androidExtensions{
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
+
+    //firebase
+    implementation platform('com.google.firebase:firebase-bom:26.1.0')
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.2.0'
 
     def room_version = "2.3.0-alpha03"
